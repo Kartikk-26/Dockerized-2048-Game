@@ -1,24 +1,123 @@
-# 2048
-A small clone of [1024](https://play.google.com/store/apps/details?id=com.veewo.a1024), based on [Saming's 2048](http://saming.fr/p/2048/) (also a clone). 2048 was indirectly inspired by [Threes](https://asherv.com/threes/).
 
-Made just for fun. [Play it here!](http://gabrielecirulli.github.io/2048/)
+---
 
-The official app can also be found on the [Play Store](https://play.google.com/store/apps/details?id=com.gabrielecirulli.app2048) and [App Store!](https://itunes.apple.com/us/app/2048-by-gabriele-cirulli/id868076805)
+# 🕹️ Dockerized 2048 Game 🎮
 
-### Contributions
+This project demonstrates the use of **Docker** by containerizing the popular **2048 game**. 
 
-[Anna Harren](https://github.com/iirelu/) and [sigod](https://github.com/sigod) are maintainers for this repository.
+The project aims to provide hands-on experience with Docker commands, including building images, running, and managing containers, while deploying a fun, interactive game.
 
-Other notable contributors:
+The game runs on an **Nginx server**, and the Docker container is deployed on **AWS Elastic Beanstalk** to provide a scalable and accessible setup.
 
- - [TimPetricola](https://github.com/TimPetricola) added best score storage
- - [chrisprice](https://github.com/chrisprice) added custom code for swipe handling on mobile
- - [marcingajda](https://github.com/marcingajda) made swipes work on Windows Phone
- - [mgarciaisaia](https://github.com/mgarciaisaia) added support for Android 2.3
+---
 
-Many thanks to [rayhaanj](https://github.com/rayhaanj), [Mechazawa](https://github.com/Mechazawa), [grant](https://github.com/grant), [remram44](https://github.com/remram44) and [ghoullier](https://github.com/ghoullier) for the many other good contributions.
+## ✨ **Features**
 
-### Screenshot
+- Fully Dockerized setup for the 2048 game.
+- Uses an Nginx server to serve the game.
+- Deployed on AWS Elastic Beanstalk for production-grade scalability.
+- Learn and practice Docker commands such as:
+  - Building Docker images.
+  - Running and stopping Docker containers.
+  - Inspecting Docker images and container logs.
+
+---
+
+## 🛠️ **Technologies Used**
+
+### Core:
+
+- **Docker** for containerizing the application.
+- **Nginx** for serving the game.
+- **AWS Elastic Beanstalk** for deployment.
+- **JavaScript** for the game logic.
+
+---
+
+## 📂 **Folder Structure**
+
+```
+Dockerized-2048-Game/
+│
+├── js/                      # JavaScript files for game logic
+├── meta/                    # Metadata for the project
+├── style/                   # CSS styles for the game
+├── .gitignore               # Git ignore file
+├── .jshintrc                # JavaScript linting rules
+├── CONTRIBUTING.md          # Guidelines for contributing
+├── Dockerfile               # Dockerfile for building the game image
+├── LICENSE.txt              # License for the project
+├── README.md                # Documentation for the project
+├── Rakefile                 # Rake configuration
+├── favicon.ico              # Favicon for the game
+├── index.html               # Main HTML file for the game
+```
+
+---
+
+## 🏡 **Setting Up the Project Locally**
+
+To run this project locally, follow these steps:
+
+### 📥 **Step 1 : Create/Access the Dockerfile**
+
+Ensure you have a valid `Dockerfile` to set up the Nginx server and the 2048 game.
+
+### 🐋 **Step 2 : Build the Docker Image**
+
+Run the following command to build the Docker image:
+
+```bash
+docker build -t 2048-nginx .
+```
+
+### 🔍 **Step 3 : Verify the Docker Image**
+
+Check if the image is built successfully:
+
+```bash
+docker images
+```
+
+Ensure the image is listed with the name `2048-nginx`.
+
+### ▶️ **Step 4 : Run the Docker Container**
+
+Start the container with the following command:
+
+```bash
+docker run -p 80:80 2048-nginx
+```
+
+### 🌐 **Step 5 : Access the Game**
+
+Open your browser and visit:
+
+```
+http://localhost
+```
+
+---
+
+## ⚙️ **Customization**
+
+You can modify the `nginx.conf` file or the game assets (`index.html`, `main.css`, `game.js`) to customize the game as per your requirements.
+
+---
+
+## 💡 **Purpose**
+
+This project is designed to:
+
+- Simplify Docker concepts for beginners.
+- Provide a practical example of containerization using a lightweight application.
+- Help users understand Docker images, Docker containers, Docker Compose and deployment strategies.
+- Offer an engaging way to learn Docker while playing the 2048 game.
+
+---
+
+
+## 📸 **Screenshot**
 
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/1175750/8614312/280e5dc2-26f1-11e5-9f1f-5891c3ca8b26.png" alt="Screenshot"/>
@@ -26,13 +125,24 @@ Many thanks to [rayhaanj](https://github.com/rayhaanj), [Mechazawa](https://gith
 
 That screenshot is fake, by the way. I never reached 2048 :smile:
 
-## Contributing
-Changes and improvements are more than welcome! Feel free to fork and open a pull request. Please make your changes in a specific branch and request to pull into `master`! If you can, please make sure the game fully works before sending the PR, as that will help speed up the process.
+## 💡 Connect with Me
 
-You can find the same information in the [contributing guide.](https://github.com/gabrielecirulli/2048/blob/master/CONTRIBUTING.md)
+Stay connected on [LinkedIn](https://www.linkedin.com/in/-kartikjain/) to explore more projects and innovative ideas.
 
-## License
-2048 is licensed under the [MIT license.](https://github.com/gabrielecirulli/2048/blob/master/LICENSE.txt)
+Let’s collaborate and build amazing applications together!
 
-## Donations
-I made this in my spare time, and it's hosted on GitHub (which means I don't have any hosting costs), but if you enjoyed the game and feel like buying me coffee, you can donate at my BTC address: `1Ec6onfsQmoP9kkL3zkpB6c5sA4PVcXU2i`. Thank you very much!
+Here's the acknowledgment section updated with emojis for a more engaging touch:  
+
+---
+
+### 🙏 Acknowledgment  
+
+A big thanks to [Gabriele Cirulli's GitHub repository](https://github.com/gabrielecirulli/2048) 🎉 for creating this wonderful game. I 🐳 dockerized it and, in the process, solidified my understanding of Docker concepts. 🚀
+
+---
+
+
+
+
+
+
