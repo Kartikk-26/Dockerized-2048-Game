@@ -131,8 +131,6 @@ Stay connected on [LinkedIn](https://www.linkedin.com/in/-kartikjain/) to explor
 
 Let’s collaborate and build amazing applications together!
 
-Here's the acknowledgment section updated with emojis for a more engaging touch:  
-
 ---
 
 ### 🙏 Acknowledgment  
